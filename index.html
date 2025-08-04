@@ -229,10 +229,7 @@
       let msg = 'مرحبًا، أود تقديم طلب.';
       const deliveryType = document.querySelector('input[name="deliveryType"]:checked').value;
       const selected = deliverySelect.value;
-      if(deliveryType === 'with' && selected && deliveryPrices[selected]) {
-        msg += `\nالتوصيل إلى: ${deliveryNames[selected]}\nسعر التوصيل: ${deliveryPrices[selected].toLocaleString()} ل.ل`;
-      } else {
-        msg += '\nبدون توصيل';
+      
       }
       window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
       closeDeliveryModal();
@@ -240,5 +237,6 @@
   </script>
 </body>
 </html>
-//rename to index.html
+
+
 
